@@ -1,8 +1,16 @@
-# Yok - Kotlin HTTP request library
+<div align="center"><h1>Yok - Kotlin HTTP request library</h1></div>
 
-<img alt="Logo" src="./src/main/resources/logo.png" width="485"/>
+<div align="center"><img alt="Logo" src="./src/main/resources/logo.png"/></div>
 
-![Open issues](https://img.shields.io/github/issues-raw/Virefire/Yok)
+<div align="center">
+    <img alt="Open issues" src="https://img.shields.io/github/issues-raw/Virefire/Yok"/>
+    <img alt="Open issues" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fmaven.rikonardo.com%2Freleases%2Fdev%2Fvirefire%2Fyok%2FYok%2Fmaven-metadata.xml"/>
+    <img alt="Open issues" src="https://img.shields.io/github/languages/code-size/Virefire/Yok"/>
+</div>
+
+<br>
+
+<hr>
 
 💼 **This readme contains full library documentation/tutorial!**
 
@@ -17,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.yok:Yok:1.0.0")
+    implementation("dev.virefire.yok:Yok:1.0.1")
 }
 ```
 
