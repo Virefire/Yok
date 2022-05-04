@@ -89,7 +89,7 @@ private fun httpRequest(req: Request): Response {
     val resHeaders = headersOf()
 
     connection.headerFields.forEach {
-        val key = it.key
+        val key = it.key ?: return@forEach
         it.value.forEach { value ->
             resHeaders.add(key, value)
         }

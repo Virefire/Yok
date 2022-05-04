@@ -1,5 +1,7 @@
 # Yok - Kotlin HTTP request library
 
+<img alt="Logo" src="./src/main/resources/logo.png" width="485"/>
+
 ![Open issues](https://img.shields.io/github/issues-raw/Virefire/Yok)
 
 💼 **This readme contains full library documentation/tutorial!**
