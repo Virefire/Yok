@@ -1,5 +1,4 @@
 publish.properties
-.idea/
+.idea
 .gradle
-build/
-!gradle-wrapper.jar
+build
