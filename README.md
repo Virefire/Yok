@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.yok:Yok:1.0.1")
+    implementation("dev.virefire.yok:Yok:1.0.2")
 }
 ```
 

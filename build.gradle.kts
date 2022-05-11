@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "dev.virefire.yok"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.kson:KSON:1.2.0")
+    implementation("dev.virefire.kson:KSON:1.3.0")
     implementation("org.apache.httpcomponents:httpmime:4.5.13")
 }
 
