@@ -10,7 +10,7 @@ open class Yok constructor() {
         internal val version: String
         init {
             val p = Properties()
-            val stream = Yok::class.java.getResourceAsStream("/version.properties")
+            val stream = Yok::class.java.getResourceAsStream("/dev/virefire/yok/version.properties")
             version = if (stream != null) {
                 p.load(stream)
                 p.getProperty("version")

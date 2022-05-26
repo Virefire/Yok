@@ -45,7 +45,7 @@ class Request internal constructor(internal val client: Yok) {
             set(value) {
                 bodyStream = ByteArrayInputStream(
                     value!!
-                        .map { "${URLEncoder.encode(it.key, Charset.defaultCharset())}=${URLEncoder.encode(it.value, Charset.defaultCharset())}" }
+                        .map { "${URLEncoder.encode(it.key, "UTF-8")}=${URLEncoder.encode(it.value, "UTF-8")}" }
                         .joinToString("&")
                         .toByteArray()
                 )

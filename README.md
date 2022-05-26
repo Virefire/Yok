@@ -1,6 +1,6 @@
 <div align="center"><h1>Yok - Kotlin HTTP request library</h1></div>
 
-<div align="center"><img alt="Logo" src="./src/main/resources/logo.png"/></div>
+<div align="center"><img alt="Logo" src="./logo.png"/></div>
 
 <div align="center">
     <img alt="Open issues" src="https://img.shields.io/github/issues-raw/Virefire/Yok"/>
@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.yok:Yok:1.0.2")
+    implementation("dev.virefire.yok:Yok:1.0.3")
 }
 ```
 

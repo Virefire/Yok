@@ -7,7 +7,6 @@ import dev.virefire.yok.types.headersOf
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
-import java.nio.charset.Charset
 
 internal fun performRequest(req: Request): Response {
     if (req.url == null) throw IllegalArgumentException("URL must be specified")
@@ -39,13 +38,13 @@ internal fun performRequest(req: Request): Response {
 private fun httpRequest(req: Request): Response {
     val urlString = req.url!!.split("/").map {
         if (it.startsWith(':') && it.length > 1) {
-            return@map URLEncoder.encode(req.params[it.substring(1)]?: "", Charset.defaultCharset())
+            return@map URLEncoder.encode(req.params[it.substring(1)]?: "", "UTF-8")
         } else {
             return@map it
         }
     }.joinToString("/")
     val queryString = req.query.map {
-        "${URLEncoder.encode(it.key, Charset.defaultCharset())}=${URLEncoder.encode(it.value, Charset.defaultCharset())}"
+        "${URLEncoder.encode(it.key, "UTF-8")}=${URLEncoder.encode(it.value, "UTF-8")}"
     }.joinToString("&")
 
     val url = URL(urlString + if (queryString.isNotEmpty()) (if (urlString.contains('?')) "&$queryString" else "?$queryString") else "")

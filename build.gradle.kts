@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "dev.virefire.yok"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -17,8 +17,12 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.kson:KSON:1.3.0")
+    implementation("dev.virefire.kson:KSON:1.3.1")
     implementation("org.apache.httpcomponents:httpmime:4.5.13")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 }
 
 tasks.withType<KotlinCompile> {
@@ -27,7 +31,7 @@ tasks.withType<KotlinCompile> {
 
 tasks.register("createProperties") {
     doLast {
-        val f = File("$buildDir/resources/main/version.properties")
+        val f = File("$buildDir/resources/main/dev/virefire/yok/version.properties")
         File(f.parent).mkdirs()
         val p = Properties()
         p["version"] = project.version.toString()
