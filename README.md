@@ -25,9 +25,17 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.virefire.yok:Yok:1.0.3")
+    implementation("dev.virefire.yok:Yok:1.0.4")
 }
 ```
+
+**Note that on some JVM implementations PATCH and CONNECT methods doesn't work due to bug in java.net library. Yok uses workaround based on reflections, which on Java 9+ requires next JVM args:**
+
+```
+--add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED
+```
+
+**You don't need to add these arguments unless you are using the PATCH or CONNECT methods.**
 
 ## Documentation
 

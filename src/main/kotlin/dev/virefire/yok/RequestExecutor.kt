@@ -56,7 +56,7 @@ private fun httpRequest(req: Request): Response {
         else
             url.openConnection() as HttpURLConnection
 
-    connection.requestMethod = req.method!!.name
+    setMethod(connection, req.method!!)
     connection.connectTimeout = req.connectTimeout ?: req.client.config.connectTimeout
     connection.readTimeout = req.readTimeout ?: req.client.config.readTimeout
     connection.instanceFollowRedirects = req.followRedirects ?: req.client.config.followRedirects

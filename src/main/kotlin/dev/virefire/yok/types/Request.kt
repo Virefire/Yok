@@ -6,7 +6,6 @@ import java.io.ByteArrayInputStream
 import java.io.InputStream
 import java.net.Proxy
 import java.net.URLEncoder
-import java.nio.charset.Charset
 
 class Request internal constructor(internal val client: Yok) {
     interface Body {
